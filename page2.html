@@ -31,13 +31,15 @@
         text('Take the stairs or the elevator', width / 2, 50);
         textSize(16);
         text('Choose to take the stairs or the elevator', width / 2, 100);
-        // Load the first image
+        // Load the first image with alt text
         loadImage('2311260401_114b67a696_o.jpg', img => {
           image(img, 0, 150, width / 2, height - 150);
+          img.alt = 'Page 3 Stairs Image';
         });
-        // Load the second image
+        // Load the second image with alt text
         loadImage('50062555751_9ee87ed94a_c.jpg', img => {
           image(img, width / 2, 150, width / 2, height - 150);
+          img.alt = 'Page 3 Elevator Image';
         });
       }
 
