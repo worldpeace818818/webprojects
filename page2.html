@@ -52,12 +52,11 @@
       }
     </script>
   </div>
-  <button onclick="redirectHome()">Home</button>
+  <button onclick="redirectHome(setTimeout(redirectHome, 0); // Redirect to home page after 10 seconds)">Home</button>
   <script>
     function redirectHome() {
       window.location.href = 'index.html';
     }
-    setTimeout(redirectHome, 0); // Redirect to home page after 10 seconds
   </script>
 </body>
 </html>
