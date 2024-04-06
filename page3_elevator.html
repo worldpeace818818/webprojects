@@ -5,26 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My first website</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
-<style>
-    body {
-      background-color: black; /* Change background color to black */
-      color: white; /* Change text color to white */
-      font-family: Arial, sans-serif; /* Specify font */
-      padding: 20px; /* Add some padding for better readability */
-    }
-
-    canvas {
-      display: block; /* Ensure the canvas is displayed as a block element */
-      margin: 0 auto; /* Center the canvas horizontally */
-    }
-  </style>
 </head>
 <body>
   <div id="content" style="display:none;">
     <h1 style="text-align:center;">There are some strange guests at the hotel !!!</h1>
     <p style="text-align:center;">Just act normal</p>
     <div id="image-container" style="text-align:center;"></div>
-   
+    <button id="home-btn" style="display:none;">Go to Home Page</button>
   </div>
 
   <script>
@@ -42,7 +29,7 @@
         image(img, 0, 0, width, height);
         document.getElementById('content').style.display = 'block';
         document.getElementById('image-container').appendChild(img.canvas);
-        
+        document.getElementById('home-btn').style.display = 'block';
       });
     }
 
@@ -50,7 +37,8 @@
       window.location.href = 'page4_elevator.html';
     }
 
-    
+    document.getElementById('home-btn').addEventListener('click', function() {
+      window.location.href = 'index.html';
     });
   </script>
 </body>
