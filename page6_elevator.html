@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My first website</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+<style>
+    body {
+      background-color: black; /* Change background color to black */
+      color: white; /* Change text color to white */
+      font-family: Arial, sans-serif; /* Specify font */
+      padding: 20px; /* Add some padding for better readability */
+    }
+
+    canvas {
+      display: block; /* Ensure the canvas is displayed as a block element */
+      margin: 0 auto; /* Center the canvas horizontally */
+    }
+  </style>
+</head>
+<body>
+  <h1>Looks like we're on the death star!!!</h1>
+  <p>I really have to start booking hotels better; this is the second time this has happened.</p>
+
+  <!-- Button -->
+  <button onclick="goHome()">Go Home</button>
+
+  <script>
+    function setup() {
+      createCanvas(1400, 600);
+      background(255);
+      textSize(32);
+      fill(0);
+      textAlign(CENTER);
+      text('Looks like we\'re on the death star!!!', width / 2, 50);
+      // Load the image
+      loadImage('8153710715_c24cdd3ae4_h.jpg', img => {
+        image(img, 0, 100, width, height - 100); // Adjust the y-coordinate to give space for the text
+      });
+    }
+
+    function goHome() {
+      window.location.href = 'index.html';
+    }
+  </script>
+</body>
+</html>
