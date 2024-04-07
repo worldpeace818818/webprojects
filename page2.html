@@ -20,6 +20,11 @@
   </style>
 </head>
 <body>
+  </div>
+
+    <!-- Button to redirect to index.html -->
+    <button id="redirect-button">Go to Home</button>
+  </div>
   <div id="content">
     <script>
       function setup() {
@@ -48,6 +53,11 @@
           window.location.href = 'page3_elevator.html';
         }
       }
+      // Add event listener to the button
+    document.getElementById("redirect-button").addEventListener("click", function() {
+      // Redirect to index.html
+      window.location.href = "index.html";
+    });
     </script>
   </div>
 </body>
