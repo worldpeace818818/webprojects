@@ -4,7 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My first website</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+  <style>
+    #content {
+      text-align: center;
+    }
+    #image-container {
+      display: flex; /* Use flexbox for layout */
+      justify-content: center; /* Center the images horizontally */
+      margin-top: 20px;
+    }
+    .image-wrapper {
+      flex: 0 0 50%; /* Each image wrapper takes up 50% of the container width */
+    }
+    .image-wrapper img {
+      width: 100%; /* Make the images fill their respective image wrappers */
+    }
+  </style>
   <style>
     body {
       background-color: black; /* Change background color to black */
@@ -20,45 +35,34 @@
   </style>
 </head>
 <body>
-  </div>
-
+  <div id="content">
     <!-- Button to redirect to index.html -->
     <button id="redirect-button">Go to Home</button>
+    <p>Take the stairs or the elevator.</p>
+    <div id="image-container">
+      <div class="image-wrapper">
+        <img src="2311260401_114b67a696_o.jpg" id="hallway-image1"/>
+      </div>
+      <div class="image-wrapper">
+        <img src="50062555751_9ee87ed94a_c.jpg" id="hallway-image2"/>
+      </div>
+    </div>
   </div>
-  <div id="content">
-    <script>
-      function setup() {
-        createCanvas(800, 600);
-        background(255);
-        textSize(32);
-        fill(0);
-        textAlign(CENTER);
-        text('Take the stairs or the elevator', width / 2, 50);
-        textSize(16);
-        text('Choose to take the stairs or the elevator', width / 2, 100);
-        // Load the first image
-        loadImage('2311260401_114b67a696_o.jpg', img => {
-          image(img, 0, 150, width / 2, height - 150);
-        });
-        // Load the second image
-        loadImage('50062555751_9ee87ed94a_c.jpg', img => {
-          image(img, width / 2, 150, width / 2, height - 150);
-        });
-      }
 
-      function mouseClicked() {
-        if (mouseX < width / 2) {
-          window.location.href = 'page3_stairs.html';
-        } else {
-          window.location.href = 'page3_elevator.html';
-        }
-      }
-      // Add event listener to the button
+  <script>
+    document.getElementById("hallway-image1").addEventListener("click", function() {
+      window.location.href = "page3_stairs.html";
+    });
+
+    document.getElementById("hallway-image2").addEventListener("click", function() {
+      window.location.href = "page3_elevator.html";
+    });
+
+    // Add event listener to the button
     document.getElementById("redirect-button").addEventListener("click", function() {
       // Redirect to index.html
       window.location.href = "index.html";
     });
-    </script>
-  </div>
+  </script>
 </body>
 </html>
