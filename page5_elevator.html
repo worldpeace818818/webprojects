@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My first website</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+  <style>
+    body {
+      background-color: black; /* Change background color to black */
+      color: white; /* Change text color to white */
+      font-family: Arial, sans-serif; /* Specify font */
+      padding: 20px; /* Add some padding for better readability */
+    }
+
+    canvas {
+      display: block; /* Ensure the canvas is displayed as a block element */
+      margin: 0 auto; /* Center the canvas horizontally */
+    }
+  </style>
+</head>
+<body>
+  <div id="content">
+    <script>
+      function setup() {
+        createCanvas(800, 600);
+        background(255);
+        textSize(32);
+        fill(0);
+        textAlign(CENTER);
+        text('strange noises coming from the other side', width / 2, 50);
+        // Load the image
+        loadImage('25297333_9a945fa4a0_k.jpg', img => {
+          image(img, 0, 100, width, height - 100);
+        });
+      }
+
+      function mouseClicked() {
+        window.location.href = 'page6_elevator.html';
+      }
+    </script>
+  </div>
+</body>
+</html>
