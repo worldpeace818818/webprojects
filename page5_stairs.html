@@ -30,12 +30,16 @@
 </head>
 <body>
   <div id="content">
-    <p>I can hear noises. I should follow them; maybe it's an exit.</p>
+    <p> I can hear noises. I should follow them; maybe it's an exit</p>
     <div id="image-container">
-      <img src="52059275013_92ae2616a1_3k.jpg" width="800px"/>
+      <img src="52059275013_92ae2616a1_3k.jpg" width="800px" id="hallway-image"/>
     </div>
   </div>
 
+  <script>
+    document.getElementById("hallway-image").addEventListener("click", function() {
+      window.location.href = "page6_stairs.html";
+    });
   </script>
 </body>
 </html>
