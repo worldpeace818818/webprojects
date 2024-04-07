@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My first website</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+</head>
+<body>
+  <div id="content">
+    <script>
+      function setup() {
+        createCanvas(800, 600);
+        background(255);
+        textSize(32);
+        fill(0);
+        textAlign(CENTER);
+        text('these stairs go on forever but i think its opening up', width / 2, 50);
+        // Load the image
+        loadImage('50813278616_1d3a27c62b_b.jpg', img => {
+          image(img, 0, 100, width, height);
+        });
+      }
+
+      function mouseClicked() {
+        window.location.href = 'page5_stairs.html';
+      }
+    </script>
+  </div>
+</body>
+</html>
