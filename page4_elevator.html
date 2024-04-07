@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My first website</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+</head>
+<body>
+  <div id="content">
+    <!-- Text -->
+    <h1 style="text-align: center;">Just act normal</h1>
+
+    <!-- Canvas for image -->
+    <div id="canvasContainer" style="text-align: center;">
+      <canvas id="myCanvas"></canvas>
+    </div>
+
+    <!-- Hyperlink for doors opening -->
+    <div style="text-align: center; margin-top: 20px;">
+      <a href="page5_elevator.html">Doors opening</a>
+    </div>
+  </div>
+
+  <script>
+    function setup() {
+      let canvas = createCanvas(800, 600);
+      canvas.parent('canvasContainer');
+      background(255);
+      textSize(32);
+      fill(0);
+      textAlign(CENTER);
+      text('Just act normal', width / 2, 50);
+      // Load the image
+      loadImage('images/1803919239_eeca34f7ed_c(1).jpg', img => {
+        image(img, 0, 0, width, height);
+      });
+    }
+
+    function mouseClicked() {
+      window.location.href = 'page5_elevator.html';
+    }
+  </script>
+</body>
+</html>
