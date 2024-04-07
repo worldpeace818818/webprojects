@@ -4,7 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My first website</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+  <style>
+    #content {
+      text-align: center;
+    }
+    #image-container {
+      position: relative;
+      display: inline-block;
+      margin-top: 20px;
+    }
+  </style>
   <style>
     body {
       background-color: black; /* Change background color to black */
@@ -20,29 +29,19 @@
   </style>
 </head>
 <body>
-  <div id="button-content">
-    <!-- Button for redirecting to home page -->
+  <div id="content">
+     <h1>These stairs have some strange lighting</h1>
+  <p>How far down do these go down? I\'ve been walking for nearly 30 minutes.</p>
+
+    <div id="image-container">
+      <img src="50873589398_a2eb847e5a_3k.jpg" width="800px" id="hallway-image"/>
+    </div>
   </div>
 
   <script>
-    function setup() {
-      createCanvas(800, 600);
-      background(255);
-      textSize(32);
-      fill(0);
-      textAlign(CENTER);
-      text('These stairs have some strange lighting', width / 2, 50);
-      textSize(16);
-      text('How far down do these go down? I\'ve been walking for nearly 30 minutes.', width / 2, 100);
-      // Load the image
-      loadImage('50873589398_a2eb847e5a_3k.jpg', img => {
-        image(img, 0, 0, width, height);
-      });
-    }
-
-    function mouseClicked() {
-      window.location.href = 'page4_stairs.html';
-    }
+    document.getElementById("hallway-image").addEventListener("click", function() {
+      window.location.href = "page4_stairs.html";
+    });
   </script>
 </body>
 </html>
