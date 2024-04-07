@@ -4,7 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My first website</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+  <style>
+    #content {
+      text-align: center;
+    }
+    #image-container {
+      position: relative;
+      display: inline-block;
+      margin-top: 20px;
+    }
+  </style>
   <style>
     body {
       background-color: black; /* Change background color to black */
@@ -20,33 +29,27 @@
   </style>
 </head>
 <body>
-  <div id="content" style="display:none;">
-    <h1 style="text-align:center;">There are some strange guests at the hotel !!!</h1>
-    <p style="text-align:center;">Just act normal</p>
-    <div id="image-container" style="text-align:center;"></div>
+  </div>
+
+    <!-- Button to redirect to index.html -->
+    <button id="redirect-button">Go to Home</button>
+  </div>
+  <div id="content">
+      <p>There's some strange guests at the hotel !!!</p>
+    <div id="image-container">
+      <img src="5927551004_d1590e3af5_k.jpg" width="800px" id="hallway-image"/>
+    </div>
   </div>
 
   <script>
-    function setup() {
-      createCanvas(800, 600);
-      background(255);
-      textSize(32);
-      fill(0);
-      textAlign(CENTER);
-      text("There's some strange guests at the hotel !!!", width / 2, 50);
-      textSize(16);
-      text('Just act normal', width / 2, 100);
-      // Load the image
-      loadImage('5927551004_d1590e3af5_k.jpg', img => {
-        image(img, 0, 0, width, height);
-        document.getElementById('content').style.display = 'block';
-        document.getElementById('image-container').appendChild(img.canvas);
-      });
-    }
-
-    function mouseClicked() {
-      window.location.href = 'page4_elevator.html';
-    }
+    document.getElementById("hallway-image").addEventListener("click", function() {
+      window.location.href = "page4_elevator.html";
+    });
+     // Add event listener to the button
+    document.getElementById("redirect-button").addEventListener("click", function() {
+      // Redirect to index.html
+      window.location.href = "index.html";
+    });
   </script>
 </body>
 </html>
