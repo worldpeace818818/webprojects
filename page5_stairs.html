@@ -15,6 +15,11 @@
     }
   </style>
   <style>
+    </div>
+
+    <!-- Button to redirect to index.html -->
+    <button id="redirect-button">Go to Home</button>
+  </div>
     body {
       background-color: black; /* Change background color to black */
       color: white; /* Change text color to white */
@@ -39,6 +44,11 @@
   <script>
     document.getElementById("hallway-image").addEventListener("click", function() {
       window.location.href = "page6_stairs.html";
+    });
+     // Add event listener to the button
+    document.getElementById("redirect-button").addEventListener("click", function() {
+      // Redirect to index.html
+      window.location.href = "index.html";
     });
   </script>
 </body>
